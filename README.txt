@@ -36,11 +36,13 @@ third_party/      Dear ImGui (MIT) and a standalone ATRAC3/ATRAC3+ decoder
                   ships as test assets (needed to draw any text at all)
 data/             the syscall NID database and VFPU instruction table the
                   recompiler and disassembler read as input
-generated/        recompiled C output (checked in so you can build without
-                  running the recompiler first) -- excludes image.bin
 tests/            regression checks: a boot trace, and a decompression
                   self-check against the disc's mission archives
 build.py          compiles runtime/ + generated/ into the pspreco executable
+
+generated/ (recompiled C output) is not checked in -- it's produced by
+recomp/analyze/analyze.py and recomp/emit/emit_c.py, see "Building the
+recompiled game" below.
 
 
 Requirements
