@@ -35,14 +35,31 @@
  * We let the original run untouched and then write the deltas ourselves from
  * the right stick, reusing its own angle limits and its own smoothing.
  *
- * CAUTION, and the reason the camera did not work on the first attempt: which
- * function CONSUMES cam+28/+32 is not yet established.  It is not sub_62C50 or
- * its view-0/1/2 tail sub_6272C (that one returns immediately while the mode
- * byte is 0, and never reads either field), and it is not sub_5EEE0, which
- * builds the view matrix from the position and target vectors at entity+8 and
- * entity+12.  The remaining candidate is sub_622E0, the rebuild that both
- * sub_623BC and sub_6272C call.  Until that is pinned down, writing the deltas
- * is necessary but may not be sufficient.
+ * WHY IT DID NOT WORK ON THE FIRST ATTEMPT, and what actually reads cam+28/+32:
+ * not sub_62C50 or its view-0/1/2 tail sub_6272C (that one returns immediately
+ * while the mode byte is 0 and never reads either field), and not sub_5EEE0,
+ * which only builds the view matrix from the position/target vectors already
+ * sitting at entity+8/12.  The real reader is gated on the mode byte itself:
+ * sub_61910 (called for every camera from msg 0 and msg 6, never msg 1) picks
+ * a per-view handler -- sub_5F2FC (view 0), sub_5FA30 (view 1), sub_60100
+ * (view 2) -- and *only their mode==4 branch* touches cam+28/+32 at all, using
+ * them as spherical angles (sub_20B5BC/sub_20B760, i.e. cos/sin) to swing the
+ * look target (views 0/1) or the eye (view 2) around at the camera's current
+ * distance (cam+36).  Every other mode byte ignores both fields outright.
+ *
+ * Mode 4 is set exactly once in the whole engine, in sub_6272C, gated on
+ * dword_287BDC bit 25 -- the free-look button this hardware never had.  So the
+ * deltas were being computed and stored correctly; they were simply never
+ * read, because nothing had ever asked for mode 4.  Writing cam+28/+32 was
+ * necessary but not sufficient -- cam+24 (CAM_MODE) has to be forced to 4 too,
+ * for exactly as long as the look is active, which is what camera_after()
+ * does below.  sub_6272C resets the byte to 1 on its very next pass (it forces
+ * mode to 1 unconditionally the instant it sees any nonzero value, before
+ * checking the bit-25 gate), but that pass runs inside the msg==1 call to the
+ * *original* handler, which happens before our override in ov_camera -- so we
+ * simply re-assert 4 afterwards, every frame the look is held.  Releasing the
+ * stick just stops re-asserting it; the engine's own default processing then
+ * settles the mode back to 1 on its own.
  *
  * 2. RUDDER (sub_79DD8 / sub_79EC0, actions 9 and 10)
  *
@@ -91,7 +108,10 @@
 #define CAM_FLAGS      20u          /* u16: bit0 rebuild.  DO NOT WRITE --
                                      * sub_7834C reads this byte and can zero
                                      * the rudder off the back of it. */
-#define CAM_MODE       24u          /* u8:  4 == engine free look          */
+#define CAM_MODE       24u          /* u8:  4 == engine free look.  We force
+                                     * this to drive the views' mode==4 branch
+                                     * (sub_5F2FC/5FA30/60100), the only code
+                                     * that ever reads CAM_PITCH/CAM_YAW.     */
 #define CAM_PITCH      28u          /* f32: smoothed pitch delta           */
 #define CAM_YAW        32u          /* f32: smoothed yaw delta             */
 
@@ -271,6 +291,15 @@ static void camera_after(u8 *ram, u32 entity)
 
     mem_wf32(ram, cam + CAM_PITCH, s_look_pitch);
     mem_wf32(ram, cam + CAM_YAW,   s_look_yaw);
+
+    /* The write that was missing on the first attempt.  sub_5F2FC/5FA30/60100
+     * only read CAM_PITCH/CAM_YAW from their mode==4 branch, and mode is never
+     * 4 in normal play (see the file header) -- so without this the deltas
+     * above were computed and stored correctly and then never looked at.
+     * sub_6272C claws this back to 1 on its very next pass, once per frame,
+     * but that pass is inside the original handler and runs before we get
+     * here, so re-asserting 4 every frame the look is held is sufficient. */
+    mem_w8(ram, cam + CAM_MODE, 4u);
 
     /* Setting flag bit 2 here was wrong and actively harmful.  sub_7834C
      * inspects this same byte in its tail and, on one branch, zeroes the
