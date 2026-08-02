@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+build/
+*.o
+*.exe
+*.dll
+generated/image.bin
+generated/*.trace
+pspreco.toml
+EBOOT.elf
+*.iso
+*.cdi
+*.ISO
+*.CDI
+game/
+memstick/

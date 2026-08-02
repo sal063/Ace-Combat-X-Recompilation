@@ -1,0 +1,363 @@
+[pspreco] loaded 3785392 bytes at guest 0x08804000
+[pspreco] 5292 recompiled functions
+[hle] bound 195/230 imports (35 still unimplemented)
+[pspreco] entering module at 08804128
+[hle] sceKernelSetCompiledSdkVersion(0x02070010)  /* SDK 2.7.0.16 */
+[hle] sceKernelSetCompilerVersion(0x00030306)
+[hle] sceKernelCreateThread("user_main", entry=08804234, prio=42, stack=4096, attr=80000000) -> uid=256 (guest stack 09ffeb00..09fffb00)
+[hle] sceKernelStartThread(256 /* user_main */, argSize=33) sp=09fffa90
+[pspreco] module_start returned 0; entering scheduler
+[hle] sceKernelAllocPartitionMemory("UserSbrk", type=3, size=19404800) -> uid=4098 addr=08ba1000
+[hle] sceKernelGetModuleIdByAddress(08804128) -> 274
+[hle] sceKernelCreateCallback("ExitCallback", func=08805880) -> 257
+[hle] sceKernelRegisterExitCallback(cbid=257)
+[hle] sceUtilityGetSystemParamInt(id=8) -> 1
+[hle] sceImposeSetLanguageMode(lang=1, button_assign=1)
+[hle] sceKernelCreateCallback("POWER", func=088058cc) -> 258
+[hle] scePowerRegisterCallback(slot=0, cbid=258)
+[hle] sceKernelCreateThread("MainThread", entry=0880597c, prio=42, stack=131072, attr=00004000) -> uid=259 (guest stack 09fdeb00..09ffeb00)
+[hle] sceKernelStartThread(259 /* MainThread */, argSize=0) sp=09ffeac0
+[hle] callback "POWER" (cbid=258) -> 088058cc(1, 000010e4, 09fff680)
+[hle] sceUmdActivate(mode=1, alias="disc0:")
+[hle] sceUtilityLoadAvModule(0000) -- surface is HLE'd, nothing to load
+[hle] sceUtilityLoadAvModule(0001) -- surface is HLE'd, nothing to load
+[hle] sceUtilityLoadAvModule(0002) -- surface is HLE'd, nothing to load
+[hle] sceUtilityLoadAvModule(0003) -- surface is HLE'd, nothing to load
+[hle] sceKernelLoadModule("disc0:/PSP_GAME/USRDIR/LIBFONT.PRX") -> 275 (its exports are provided by pspreco's HLE)
+[hle] sceKernelStartModule(275) -- HLE'd module, already live
+[hle] sceKernelTotalFreeMemSize() -> 1819392
+[hle] sceAudioChReserve(auto, 448 samples, stereo) -> channel 0
+[hle] sceAudioChReserve(auto, 256 samples, stereo) -> channel 1
+[hle] sceAudioChReserve(auto, 256 samples, stereo) -> channel 2
+[hle] sceAudioChReserve(auto, 256 samples, stereo) -> channel 3
+[hle] __sceSasInit(core=08b9afc0, grain=256, voices=32, stereo) -- VAG mixer active (gate envelope, no reverb)
+[hle] sceKernelCreateThread("SasCore thread", entry=089fc75c, prio=16, stack=65536, attr=00000000) -> uid=260 (guest stack 09fceb00..09fdeb00)
+[hle] sceKernelStartThread(260 /* SasCore thread */, argSize=0) sp=09fdeac0
+[audio] waveOut open: 44100 Hz stereo s16, 4 x 1024-frame blocks
+[hle] sceKernelCreateCallback("UMD Check", func=089fe178) -> 261
+[hle] sceUmdRegisterUMDCallBack(cbid=261)
+[hle] sceKernelCreateThread("ATRAC3 play thread", entry=08a0063c, prio=17, stack=32768, attr=00000000) -> uid=262 (guest stack 09fc6b00..09fceb00)
+[hle] sceKernelCreateThread("ATRAC3 play thread", entry=08a0063c, prio=17, stack=32768, attr=00000000) -> uid=263 (guest stack 09fbeb00..09fc6b00)
+[hle] sceKernelTotalFreeMemSize() -> 1688320
+
+===== the game submitted its first GE display list =====
+list 16 at 08c1a9c0: 56 commands, 0 primitives, ended with END
+GE control flow is executed; rasterisation is not implemented,
+so nothing is drawn -- see runtime/hle/ge.c.
+command ids used: 0c(x1) 0f(x1) 15(x1) 16(x1) 17(x1) 18(x1) 19(x1) 1a(x1) 1b(x1) 1c(x1) 1d(x1) 1e(x1) 1f(x1) 20(x2) 21(x1) 22(x2) 23(x2) 24(x1) 25(x1) 26(x2) 27(x1) 28(x1) 37(x1) 38(x1) 48(x1) 49(x1) 4a(x1) 4b(x1) 4c(x1) 4d(x1) 50(x1) 51(x1) 55(x1) 56(x1) 57(x1) 58(x1) 5c(x1) 5d(x1) 5e(x1) 9b(x1) c0(x2) c1(x1) c5(x1) c9(x3) d4(x1) d5(x1) df(x1) e0(x1) e1(x1)
+=======================================================
+
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=-1) -> id=16 (56 commands, 0 prims)
+[hle] sceDisplaySetMode(mode=0, 480x272)
+[hle] sceIoGetstat("disc0:/PSP_GAME/USRDIR/REGFILE.CDI") -> 1071140864 bytes
+[hle] sceKernelCreateSema("ReadSema", init=1, max=1) -> 264
+[hle] sceKernelCreateThread("ThreadLoadMain", entry=089d7a68, prio=41, stack=4096, attr=00000000) -> uid=265 (guest stack 09fbdb00..09fbeb00)
+[hle] sceKernelStartThread(265 /* ThreadLoadMain */, argSize=0) sp=09fbeac0
+[hle] sceIoOpen("disc0:/sce_lbn0x5F20_size0x20000", 00000001) -> fd=3 (131072 bytes) [from 089d6600]
+[hle] sceIoReadAsync(fd=3, buf=08ed3200, 131072) -> 131072 queued
+[hle] sceIoPollAsync(fd=3) -> ready, result 131072
+[hle] sceIoClose(fd=3) [from 089d66a0]
+[hle] sceKernelExitDeleteThread(0) from "ThreadLoadMain"
+[hle] sceCtrlSetSamplingMode(1 /* DIGITALANALOG */)
+[hle] sceGeSetCallback(signal=00000000/00000000, finish=08804bdc/00000000) -> 1
+[hle] sceKernelRegisterSubIntrHandler(intr=30, sub=0, handler=08804b40, arg=00000000)  [vblank]
+[hle] sceKernelEnableSubIntr(intr=30, sub=0)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=1)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=17 (512 commands, 4 prims)
+[hle] sceUtilityGetSystemParamInt(id=8) -> 1
+[hle] sceKernelCreateThread("ThreadLoadMain", entry=089d7a68, prio=41, stack=4096, attr=00000000) -> uid=266 (guest stack 09fbdb00..09fbeb00)
+[hle] sceKernelStartThread(266 /* ThreadLoadMain */, argSize=0) sp=09fbeac0
+[hle] sceIoOpen("disc0:/sce_lbn0x7172_size0x6A800", 00000001) -> fd=4 (436224 bytes) [from 089d6600]
+[hle] sceIoReadAsync(fd=4, buf=08f03200, 436224) -> 436224 queued
+[hle] sceIoPollAsync(fd=4) -> ready, result 436224
+[hle] sceIoClose(fd=4) [from 089d66a0]
+[hle] sceKernelExitDeleteThread(0) from "ThreadLoadMain"
+[hle] sceFontNewLib(initRec=09ffe730) -> lib f0000101
+[hle] sceFontFindOptimumFont(lib=f0000101, style=09ffe770) -> index 0 (the system default font)
+[hle] sceFontOpen(lib=f0000101, index=0, mode=0) -> font f0000202
+[hle] libfont: PGF fonts ltn0=loaded jpn0=loaded
+[hle] sceFontGetFontInfo(font=f0000202) -> PGF metrics
+[hle] sceFontFindOptimumFont(lib=f0000101, style=09ffe818) -> index 0 (the system default font)
+[hle] sceFontOpen(lib=f0000101, index=0, mode=0) -> font f0000203
+[hle] sceFontGetFontInfo(font=f0000203) -> PGF metrics
+[hle] sceKernelCreateThread("CreateFont", entry=089cd570, prio=41, stack=16384, attr=00000000) -> uid=267 (guest stack 09fbab00..09fbeb00)
+[hle] sceKernelStartThread(267 /* CreateFont */, argSize=32) sp=09fbeaa0
+[hle] sceKernelCreateThread("ThreadLoadMain", entry=089d7a68, prio=41, stack=4096, attr=00000000) -> uid=268 (guest stack 09fb9b00..09fbab00)
+[hle] sceKernelStartThread(268 /* ThreadLoadMain */, argSize=0) sp=09fbaac0
+[hle] sceIoOpen("disc0:/sce_lbn0x63B4_size0x27800", 00000001) -> fd=5 (161792 bytes) [from 089d6600]
+[hle] sceIoReadAsync(fd=5, buf=08ff0b40, 161792) -> 161792 queued
+[hle] sceKernelExitDeleteThread(0) from "CreateFont"
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=18 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=19 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=20 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=21 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=22 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=23 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=24 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=25 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=26 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=27 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=28 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=29 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=30 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=31 (98 commands, 15 prims)
+[hle] sceIoPollAsync(fd=5) -> ready, result 161792
+[hle] sceIoClose(fd=5) [from 089d66a0]
+[hle] sceKernelExitDeleteThread(0) from "ThreadLoadMain"
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=32 (98 commands, 15 prims)
+[hle] sceKernelCreateThread("ThreadLoadMain", entry=089d7a68, prio=41, stack=4096, attr=00000000) -> uid=269 (guest stack 09fbdb00..09fbeb00)
+[hle] sceKernelStartThread(269 /* ThreadLoadMain */, argSize=0) sp=09fbeac0
+[hle] sceIoOpen("disc0:/sce_lbn0x5F60_size0x22A000", 00000001) -> fd=6 (2269184 bytes) [from 089d6600]
+[hle] sceIoReadAsync(fd=6, buf=09017d80, 2269184) -> 2269184 queued
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=33 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=34 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=35 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=36 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=37 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=38 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=39 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=40 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=41 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=42 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=43 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=44 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=45 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=46 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=47 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=48 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=49 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=50 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=51 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=52 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=53 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=54 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=55 (98 commands, 15 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=56 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=57 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=58 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=59 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=60 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=61 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=62 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=63 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=64 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=65 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=66 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=67 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=68 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=69 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=70 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=71 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=72 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=73 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=74 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=75 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=76 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=77 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=78 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=79 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=80 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=81 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=82 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=83 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=84 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=85 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=86 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=87 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=88 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=89 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=90 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04044000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c1a9c0, stall=00000000, cbid=1) -> id=91 (54 commands, 1 prims)
+[hle] sceDisplaySetFrameBuf(addr=04000000, bufw=512, fmt=1, sync=0)
+[hle] sceGeListEnQueue(list=08c3a9c0, stall=00000000, cbid=1) -> id=92 (54 commands, 1 prims)
+[hle] reached the 120-frame limit (PSPRECO_MAX_FRAMES); stopping
+[pspreco] scheduler idle after 2001960 us of emulated time
+[gpu] 611 PRIM commands, 10066990 pixels written
+[gpu]   160512 texture samples, 49818 of them non-black
+[ge] 111 distinct GE command ids issued, 0 of them not modelled yet:
+[ge]   01  x117    
+[ge]   04  x611    
+[ge]   08  x117    
+[ge]   0a  x86     
+[ge]   0b  x86     
+[ge]   0c  x77     
+[ge]   0f  x77     
+[ge]   10  x320    
+[ge]   12  x117    
+[ge]   15  x77     
+[ge]   16  x77     
+[ge]   17  x6      
+[ge]   18  x1      
+[ge]   19  x1      
+[ge]   1a  x1      
+[ge]   1b  x1      
+[ge]   1c  x77     
+[ge]   1d  x77     
+[ge]   1e  x78     
+[ge]   1f  x77     
+[ge]   20  x2      
+[ge]   21  x121    
+[ge]   22  x2      
+[ge]   23  x2      
+[ge]   24  x2      
+[ge]   25  x1      
+[ge]   26  x2      
+[ge]   27  x1      
+[ge]   28  x1      
+[ge]   37  x1      
+[ge]   38  x1      
+[ge]   3a  x10     
+[ge]   3b  x120    
+[ge]   3c  x5      
+[ge]   3d  x60     
+[ge]   3e  x5      
+[ge]   3f  x80     
+[ge]   42  x76     
+[ge]   43  x76     
+[ge]   44  x152    
+[ge]   45  x76     
+[ge]   46  x76     
+[ge]   47  x152    
+[ge]   48  x1      
+[ge]   49  x1      
+[ge]   4a  x1      
+[ge]   4b  x1      
+[ge]   4c  x1      
+[ge]   4d  x1      
+[ge]   50  x1      
+[ge]   51  x1      
+[ge]   55  x163    
+[ge]   56  x1      
+[ge]   57  x1      
+[ge]   58  x163    
+[ge]   5c  x1      
+[ge]   5d  x1      
+[ge]   5e  x1      
+[ge]   5f  x5      
+[ge]   60  x5      
+[ge]   63  x5      
+[ge]   64  x5      
+[ge]   65  x5      
+[ge]   66  x5      
+[ge]   67  x5      
+[ge]   68  x5      
+[ge]   8f  x5      
+[ge]   90  x5      
+[ge]   92  x5      
+[ge]   93  x5      
+[ge]   9b  x1      
+[ge]   9c  x76     
+[ge]   9d  x76     
+[ge]   9e  x76     
+[ge]   9f  x76     
+[ge]   a0  x38     
+[ge]   a8  x38     
+[ge]   b0  x76     
+[ge]   b1  x76     
+[ge]   b8  x38     
+[ge]   c0  x2      
+[ge]   c1  x1      
+[ge]   c2  x38     
+[ge]   c3  x38     
+[ge]   c4  x76     
+[ge]   c5  x1      
+[ge]   c6  x76     
+[ge]   c7  x76     
+[ge]   c9  x3      
+[ge]   cb  x76     
+[ge]   cd  x76     
+[ge]   ce  x76     
+[ge]   cf  x196    
+[ge]   d2  x76     
+[ge]   d3  x156    
+[ge]   d4  x77     
+[ge]   d5  x77     
+[ge]   d6  x152    
+[ge]   d7  x152    
+[ge]   db  x120    
+[ge]   dc  x1      
+[ge]   dd  x2      
+[ge]   de  x120    
+[ge]   df  x121    
+[ge]   e0  x1      
+[ge]   e1  x1      
+[ge]   e2  x76     
+[ge]   e3  x76     
+[ge]   e4  x76     
+[ge]   e5  x76     
+[ge]   e7  x120    
+[ge] (pipe this through a GE command-name table to see the command names)

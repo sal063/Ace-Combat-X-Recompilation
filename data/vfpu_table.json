@@ -1,0 +1,6845 @@
+{
+ "instruction_count": 267,
+ "instructions": [
+  {
+   "name": "bvf",
+   "page": 11,
+   "mask": 4293066752,
+   "match": 1224736768,
+   "fields": {
+    "imm3": [
+     {
+      "shift": 18,
+      "bits": 3,
+      "dst_lsb": 0
+     }
+    ],
+    "offset": [
+     {
+      "shift": 0,
+      "bits": 16,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "bvf  imm3, offset",
+   "manual_ref": "VFPU manual p.11"
+  },
+  {
+   "name": "bvfl",
+   "page": 12,
+   "mask": 4293066752,
+   "match": 1224867840,
+   "fields": {
+    "imm3": [
+     {
+      "shift": 18,
+      "bits": 3,
+      "dst_lsb": 0
+     }
+    ],
+    "offset": [
+     {
+      "shift": 0,
+      "bits": 16,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "bvfl  imm3, offset",
+   "manual_ref": "VFPU manual p.12"
+  },
+  {
+   "name": "bvt",
+   "page": 13,
+   "mask": 4293066752,
+   "match": 1224802304,
+   "fields": {
+    "imm3": [
+     {
+      "shift": 18,
+      "bits": 3,
+      "dst_lsb": 0
+     }
+    ],
+    "offset": [
+     {
+      "shift": 0,
+      "bits": 16,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "bvt  imm3, offset",
+   "manual_ref": "VFPU manual p.13"
+  },
+  {
+   "name": "bvtl",
+   "page": 14,
+   "mask": 4293066752,
+   "match": 1224933376,
+   "fields": {
+    "imm3": [
+     {
+      "shift": 18,
+      "bits": 3,
+      "dst_lsb": 0
+     }
+    ],
+    "offset": [
+     {
+      "shift": 0,
+      "bits": 16,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "bvtl  imm3, offset",
+   "manual_ref": "VFPU manual p.14"
+  },
+  {
+   "name": "lv.q",
+   "page": 17,
+   "mask": 4227858434,
+   "match": 3623878656,
+   "fields": {
+    "rs": [
+     {
+      "shift": 21,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     },
+     {
+      "shift": 0,
+      "bits": 1,
+      "dst_lsb": 5
+     }
+    ],
+    "offset": [
+     {
+      "shift": 2,
+      "bits": 14,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "lv.q  vt, offset(rs)",
+   "manual_ref": "VFPU manual p.17"
+  },
+  {
+   "name": "lv.s",
+   "page": 15,
+   "mask": 4227858432,
+   "match": 3355443200,
+   "fields": {
+    "rs": [
+     {
+      "shift": 21,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     },
+     {
+      "shift": 0,
+      "bits": 2,
+      "dst_lsb": 5
+     }
+    ],
+    "offset": [
+     {
+      "shift": 2,
+      "bits": 14,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "lv.s  vt, offset(rs)",
+   "manual_ref": "VFPU manual p.15"
+  },
+  {
+   "name": "mfv",
+   "page": 19,
+   "mask": 4292935552,
+   "match": 1214251008,
+   "fields": {
+    "rt": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "mfv  rt, vd",
+   "manual_ref": "VFPU manual p.19"
+  },
+  {
+   "name": "mfvc",
+   "page": 20,
+   "mask": 4292935424,
+   "match": 1214251008,
+   "fields": {
+    "rt": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "imm8": [
+     {
+      "shift": 0,
+      "bits": 8,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "mfvc  rt, imm8",
+   "manual_ref": "VFPU manual p.20"
+  },
+  {
+   "name": "mtv",
+   "page": 21,
+   "mask": 4292935552,
+   "match": 1222639616,
+   "fields": {
+    "rt": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "mtv  rt, vd",
+   "manual_ref": "VFPU manual p.21"
+  },
+  {
+   "name": "mtvc",
+   "page": 22,
+   "mask": 4292935424,
+   "match": 1222639616,
+   "fields": {
+    "rt": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "imm8": [
+     {
+      "shift": 0,
+      "bits": 8,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "mtvc  rt, imm8",
+   "manual_ref": "VFPU manual p.22"
+  },
+  {
+   "name": "sv.q",
+   "page": 24,
+   "mask": 4227858434,
+   "match": 4160749568,
+   "fields": {
+    "rs": [
+     {
+      "shift": 21,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     },
+     {
+      "shift": 0,
+      "bits": 1,
+      "dst_lsb": 5
+     }
+    ],
+    "offset": [
+     {
+      "shift": 2,
+      "bits": 14,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "sv.q  vt, offset(rs)",
+   "manual_ref": "VFPU manual p.24"
+  },
+  {
+   "name": "sv.s",
+   "page": 23,
+   "mask": 4227858432,
+   "match": 3892314112,
+   "fields": {
+    "rs": [
+     {
+      "shift": 21,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     },
+     {
+      "shift": 0,
+      "bits": 2,
+      "dst_lsb": 5
+     }
+    ],
+    "offset": [
+     {
+      "shift": 2,
+      "bits": 14,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "sv.s  vt, offset(rs)",
+   "manual_ref": "VFPU manual p.23"
+  },
+  {
+   "name": "svl.q",
+   "page": 28,
+   "mask": 4227858434,
+   "match": 4093640704,
+   "fields": {
+    "rs": [
+     {
+      "shift": 21,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     },
+     {
+      "shift": 0,
+      "bits": 1,
+      "dst_lsb": 5
+     }
+    ],
+    "offset": [
+     {
+      "shift": 2,
+      "bits": 14,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "svl.q  vt, offset(rs)",
+   "manual_ref": "VFPU manual p.28"
+  },
+  {
+   "name": "svr.q",
+   "page": 30,
+   "mask": 4227858434,
+   "match": 4093640706,
+   "fields": {
+    "rs": [
+     {
+      "shift": 21,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     },
+     {
+      "shift": 0,
+      "bits": 1,
+      "dst_lsb": 5
+     }
+    ],
+    "offset": [
+     {
+      "shift": 2,
+      "bits": 14,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "svr.q  vt, offset(rs)",
+   "manual_ref": "VFPU manual p.30"
+  },
+  {
+   "name": "vabs.p",
+   "page": 33,
+   "mask": 4294934656,
+   "match": 3489726592,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vabs.p  vd, vs",
+   "manual_ref": "VFPU manual p.33"
+  },
+  {
+   "name": "vabs.q",
+   "page": 37,
+   "mask": 4294934656,
+   "match": 3489759360,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vabs.q  vd, vs",
+   "manual_ref": "VFPU manual p.37"
+  },
+  {
+   "name": "vabs.s",
+   "page": 32,
+   "mask": 4294934656,
+   "match": 3489726464,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vabs.s  vd, vs",
+   "manual_ref": "VFPU manual p.32"
+  },
+  {
+   "name": "vabs.t",
+   "page": 35,
+   "mask": 4294934656,
+   "match": 3489759232,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vabs.t  vd, vs",
+   "manual_ref": "VFPU manual p.35"
+  },
+  {
+   "name": "vadd.p",
+   "page": 40,
+   "mask": 4286611584,
+   "match": 1610612864,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vadd.p  vd, vs, vt",
+   "manual_ref": "VFPU manual p.40"
+  },
+  {
+   "name": "vadd.q",
+   "page": 42,
+   "mask": 4286611584,
+   "match": 1610645632,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vadd.q  vd, vs, vt",
+   "manual_ref": "VFPU manual p.42"
+  },
+  {
+   "name": "vadd.s",
+   "page": 39,
+   "mask": 4286611584,
+   "match": 1610612736,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vadd.s  vd, vs, vt",
+   "manual_ref": "VFPU manual p.39"
+  },
+  {
+   "name": "vadd.t",
+   "page": 41,
+   "mask": 4286611584,
+   "match": 1610645504,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vadd.t  vd, vs, vt",
+   "manual_ref": "VFPU manual p.41"
+  },
+  {
+   "name": "vasin.p",
+   "page": 45,
+   "mask": 4294934656,
+   "match": 3491168384,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vasin.p  vd, vs",
+   "manual_ref": "VFPU manual p.45"
+  },
+  {
+   "name": "vasin.q",
+   "page": 49,
+   "mask": 4294934656,
+   "match": 3491201152,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vasin.q  vd, vs",
+   "manual_ref": "VFPU manual p.49"
+  },
+  {
+   "name": "vasin.s",
+   "page": 43,
+   "mask": 4294934656,
+   "match": 3491168256,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vasin.s  vd, vs",
+   "manual_ref": "VFPU manual p.43"
+  },
+  {
+   "name": "vasin.t",
+   "page": 47,
+   "mask": 4294934656,
+   "match": 3491201024,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vasin.t  vd, vs",
+   "manual_ref": "VFPU manual p.47"
+  },
+  {
+   "name": "vavg.p",
+   "page": 51,
+   "mask": 4294934656,
+   "match": 3494314112,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vavg.p  vd, vs",
+   "manual_ref": "VFPU manual p.51"
+  },
+  {
+   "name": "vavg.q",
+   "page": 53,
+   "mask": 4294934656,
+   "match": 3494346880,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vavg.q  vd, vs",
+   "manual_ref": "VFPU manual p.53"
+  },
+  {
+   "name": "vavg.t",
+   "page": 52,
+   "mask": 4294934656,
+   "match": 3494346752,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vavg.t  vd, vs",
+   "manual_ref": "VFPU manual p.52"
+  },
+  {
+   "name": "vbfy1.p",
+   "page": 54,
+   "mask": 4294934656,
+   "match": 3493986432,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vbfy1.p  vd, vs",
+   "manual_ref": "VFPU manual p.54"
+  },
+  {
+   "name": "vbfy1.q",
+   "page": 55,
+   "mask": 4294934656,
+   "match": 3494019200,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vbfy1.q  vd, vs",
+   "manual_ref": "VFPU manual p.55"
+  },
+  {
+   "name": "vbfy2.q",
+   "page": 56,
+   "mask": 4294934656,
+   "match": 3494084736,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vbfy2.q  vd, vs",
+   "manual_ref": "VFPU manual p.56"
+  },
+  {
+   "name": "vc2i.s",
+   "page": 57,
+   "mask": 4294934656,
+   "match": 3493396480,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vc2i.s  vd, vs",
+   "manual_ref": "VFPU manual p.57"
+  },
+  {
+   "name": "vcmovf.p",
+   "page": 60,
+   "mask": 4294475904,
+   "match": 3534225536,
+   "fields": {
+    "imm3": [
+     {
+      "shift": 16,
+      "bits": 3,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vcmovf.p  vd, vs, imm3",
+   "manual_ref": "VFPU manual p.60"
+  },
+  {
+   "name": "vcmovf.q",
+   "page": 64,
+   "mask": 4294475904,
+   "match": 3534258304,
+   "fields": {
+    "imm3": [
+     {
+      "shift": 16,
+      "bits": 3,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vcmovf.q  vd, vs, imm3",
+   "manual_ref": "VFPU manual p.64"
+  },
+  {
+   "name": "vcmovf.s",
+   "page": 58,
+   "mask": 4294475904,
+   "match": 3534225408,
+   "fields": {
+    "imm3": [
+     {
+      "shift": 16,
+      "bits": 3,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vcmovf.s  vd, vs, imm3",
+   "manual_ref": "VFPU manual p.58"
+  },
+  {
+   "name": "vcmovf.t",
+   "page": 62,
+   "mask": 4294475904,
+   "match": 3534258176,
+   "fields": {
+    "imm3": [
+     {
+      "shift": 16,
+      "bits": 3,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vcmovf.t  vd, vs, imm3",
+   "manual_ref": "VFPU manual p.62"
+  },
+  {
+   "name": "vcmovt.p",
+   "page": 68,
+   "mask": 4294475904,
+   "match": 3533701248,
+   "fields": {
+    "imm3": [
+     {
+      "shift": 16,
+      "bits": 3,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vcmovt.p  vd, vs, imm3",
+   "manual_ref": "VFPU manual p.68"
+  },
+  {
+   "name": "vcmovt.q",
+   "page": 72,
+   "mask": 4294475904,
+   "match": 3533734016,
+   "fields": {
+    "imm3": [
+     {
+      "shift": 16,
+      "bits": 3,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vcmovt.q  vd, vs, imm3",
+   "manual_ref": "VFPU manual p.72"
+  },
+  {
+   "name": "vcmovt.s",
+   "page": 66,
+   "mask": 4294475904,
+   "match": 3533701120,
+   "fields": {
+    "imm3": [
+     {
+      "shift": 16,
+      "bits": 3,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vcmovt.s  vd, vs, imm3",
+   "manual_ref": "VFPU manual p.66"
+  },
+  {
+   "name": "vcmovt.t",
+   "page": 70,
+   "mask": 4294475904,
+   "match": 3533733888,
+   "fields": {
+    "imm3": [
+     {
+      "shift": 16,
+      "bits": 3,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vcmovt.t  vd, vs, imm3",
+   "manual_ref": "VFPU manual p.70"
+  },
+  {
+   "name": "vcmp.p",
+   "page": 76,
+   "mask": 4286611696,
+   "match": 1811939456,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "cond": [
+     {
+      "shift": 0,
+      "bits": 4,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vcmp.p  cond, vs, vt",
+   "manual_ref": "VFPU manual p.76"
+  },
+  {
+   "name": "vcmp.q",
+   "page": 80,
+   "mask": 4286611696,
+   "match": 1811972224,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "cond": [
+     {
+      "shift": 0,
+      "bits": 4,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vcmp.q  cond, vs, vt",
+   "manual_ref": "VFPU manual p.80"
+  },
+  {
+   "name": "vcmp.s",
+   "page": 74,
+   "mask": 4286611696,
+   "match": 1811939328,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "cond": [
+     {
+      "shift": 0,
+      "bits": 4,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vcmp.s  cond, vs, vt",
+   "manual_ref": "VFPU manual p.74"
+  },
+  {
+   "name": "vcmp.t",
+   "page": 78,
+   "mask": 4286611696,
+   "match": 1811972096,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "cond": [
+     {
+      "shift": 0,
+      "bits": 4,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vcmp.t  cond, vs, vt",
+   "manual_ref": "VFPU manual p.78"
+  },
+  {
+   "name": "vcos.p",
+   "page": 84,
+   "mask": 4294934656,
+   "match": 3490906240,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vcos.p  vd, vs",
+   "manual_ref": "VFPU manual p.84"
+  },
+  {
+   "name": "vcos.q",
+   "page": 88,
+   "mask": 4294934656,
+   "match": 3490939008,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vcos.q  vd, vs",
+   "manual_ref": "VFPU manual p.88"
+  },
+  {
+   "name": "vcos.s",
+   "page": 82,
+   "mask": 4294934656,
+   "match": 3490906112,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vcos.s  vd, vs",
+   "manual_ref": "VFPU manual p.82"
+  },
+  {
+   "name": "vcos.t",
+   "page": 86,
+   "mask": 4294934656,
+   "match": 3490938880,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vcos.t  vd, vs",
+   "manual_ref": "VFPU manual p.86"
+  },
+  {
+   "name": "vcrs.t",
+   "page": 90,
+   "mask": 4286611584,
+   "match": 1719697408,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vcrs.t  vd, vs, vt",
+   "manual_ref": "VFPU manual p.90"
+  },
+  {
+   "name": "vcrsp.t",
+   "page": 91,
+   "mask": 4286611584,
+   "match": 4068507648,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vcrsp.t  vd, vs, vt",
+   "manual_ref": "VFPU manual p.91"
+  },
+  {
+   "name": "vcst.p",
+   "page": 94,
+   "mask": 4292935552,
+   "match": 3495952512,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vcst.p  vd, imm5",
+   "manual_ref": "VFPU manual p.94"
+  },
+  {
+   "name": "vcst.q",
+   "page": 98,
+   "mask": 4292935552,
+   "match": 3495985280,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vcst.q  vd, imm5",
+   "manual_ref": "VFPU manual p.98"
+  },
+  {
+   "name": "vcst.s",
+   "page": 92,
+   "mask": 4292935552,
+   "match": 3495952384,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vcst.s  vd, imm5",
+   "manual_ref": "VFPU manual p.92"
+  },
+  {
+   "name": "vcst.t",
+   "page": 96,
+   "mask": 4292935552,
+   "match": 3495985152,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vcst.t  vd, imm5",
+   "manual_ref": "VFPU manual p.96"
+  },
+  {
+   "name": "vdet.p",
+   "page": 100,
+   "mask": 4286611584,
+   "match": 1728053376,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vdet.p  vd, vs, vt",
+   "manual_ref": "VFPU manual p.100"
+  },
+  {
+   "name": "vdiv.s",
+   "page": 101,
+   "mask": 4286611584,
+   "match": 1669332992,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vdiv.s  vd, vs, vt",
+   "manual_ref": "VFPU manual p.101"
+  },
+  {
+   "name": "vdot.p",
+   "page": 102,
+   "mask": 4286611584,
+   "match": 1686110336,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vdot.p  vd, vs, vt",
+   "manual_ref": "VFPU manual p.102"
+  },
+  {
+   "name": "vdot.q",
+   "page": 104,
+   "mask": 4286611584,
+   "match": 1686143104,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vdot.q  vd, vs, vt",
+   "manual_ref": "VFPU manual p.104"
+  },
+  {
+   "name": "vdot.t",
+   "page": 103,
+   "mask": 4286611584,
+   "match": 1686142976,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vdot.t  vd, vs, vt",
+   "manual_ref": "VFPU manual p.103"
+  },
+  {
+   "name": "vexp2.p",
+   "page": 107,
+   "mask": 4294934656,
+   "match": 3490971776,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vexp2.p  vd, vs",
+   "manual_ref": "VFPU manual p.107"
+  },
+  {
+   "name": "vexp2.q",
+   "page": 111,
+   "mask": 4294934656,
+   "match": 3491004544,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vexp2.q  vd, vs",
+   "manual_ref": "VFPU manual p.111"
+  },
+  {
+   "name": "vexp2.s",
+   "page": 105,
+   "mask": 4294934656,
+   "match": 3490971648,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vexp2.s  vd, vs",
+   "manual_ref": "VFPU manual p.105"
+  },
+  {
+   "name": "vexp2.t",
+   "page": 109,
+   "mask": 4294934656,
+   "match": 3491004416,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vexp2.t  vd, vs",
+   "manual_ref": "VFPU manual p.109"
+  },
+  {
+   "name": "vf2h.p",
+   "page": 113,
+   "mask": 4294934656,
+   "match": 3492937856,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vf2h.p  vd, vs",
+   "manual_ref": "VFPU manual p.113"
+  },
+  {
+   "name": "vf2h.q",
+   "page": 114,
+   "mask": 4294934656,
+   "match": 3492970624,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vf2h.q  vd, vs",
+   "manual_ref": "VFPU manual p.114"
+  },
+  {
+   "name": "vf2id.p",
+   "page": 116,
+   "mask": 4292903040,
+   "match": 3529506944,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vf2id.p  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.116"
+  },
+  {
+   "name": "vf2id.q",
+   "page": 120,
+   "mask": 4292903040,
+   "match": 3529539712,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vf2id.q  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.120"
+  },
+  {
+   "name": "vf2id.s",
+   "page": 115,
+   "mask": 4292903040,
+   "match": 3529506816,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vf2id.s  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.115"
+  },
+  {
+   "name": "vf2id.t",
+   "page": 118,
+   "mask": 4292903040,
+   "match": 3529539584,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vf2id.t  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.118"
+  },
+  {
+   "name": "vf2in.p",
+   "page": 123,
+   "mask": 4292903040,
+   "match": 3523215488,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vf2in.p  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.123"
+  },
+  {
+   "name": "vf2in.q",
+   "page": 127,
+   "mask": 4292903040,
+   "match": 3523248256,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vf2in.q  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.127"
+  },
+  {
+   "name": "vf2in.s",
+   "page": 122,
+   "mask": 4292903040,
+   "match": 3523215360,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vf2in.s  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.122"
+  },
+  {
+   "name": "vf2in.t",
+   "page": 125,
+   "mask": 4292903040,
+   "match": 3523248128,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vf2in.t  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.125"
+  },
+  {
+   "name": "vf2iu.p",
+   "page": 130,
+   "mask": 4292903040,
+   "match": 3527409792,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vf2iu.p  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.130"
+  },
+  {
+   "name": "vf2iu.q",
+   "page": 134,
+   "mask": 4292903040,
+   "match": 3527442560,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vf2iu.q  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.134"
+  },
+  {
+   "name": "vf2iu.s",
+   "page": 129,
+   "mask": 4292903040,
+   "match": 3527409664,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vf2iu.s  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.129"
+  },
+  {
+   "name": "vf2iu.t",
+   "page": 132,
+   "mask": 4292903040,
+   "match": 3527442432,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vf2iu.t  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.132"
+  },
+  {
+   "name": "vf2iz.p",
+   "page": 137,
+   "mask": 4292903040,
+   "match": 3525312640,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vf2iz.p  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.137"
+  },
+  {
+   "name": "vf2iz.q",
+   "page": 141,
+   "mask": 4292903040,
+   "match": 3525345408,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vf2iz.q  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.141"
+  },
+  {
+   "name": "vf2iz.s",
+   "page": 136,
+   "mask": 4292903040,
+   "match": 3525312512,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vf2iz.s  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.136"
+  },
+  {
+   "name": "vf2iz.t",
+   "page": 139,
+   "mask": 4292903040,
+   "match": 3525345280,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vf2iz.t  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.139"
+  },
+  {
+   "name": "vfad.p",
+   "page": 143,
+   "mask": 4294934656,
+   "match": 3494248576,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vfad.p  vd, vs",
+   "manual_ref": "VFPU manual p.143"
+  },
+  {
+   "name": "vfad.q",
+   "page": 145,
+   "mask": 4294934656,
+   "match": 3494281344,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vfad.q  vd, vs",
+   "manual_ref": "VFPU manual p.145"
+  },
+  {
+   "name": "vfad.t",
+   "page": 144,
+   "mask": 4294934656,
+   "match": 3494281216,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vfad.t  vd, vs",
+   "manual_ref": "VFPU manual p.144"
+  },
+  {
+   "name": "vfim.s",
+   "page": 146,
+   "mask": 4286578688,
+   "match": 3749707776,
+   "fields": {
+    "vd": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "imm16": [
+     {
+      "shift": 0,
+      "bits": 16,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vfim.s  vd, imm16",
+   "manual_ref": "VFPU manual p.146"
+  },
+  {
+   "name": "vflush",
+   "page": 147,
+   "mask": 4294967295,
+   "match": 4294902797,
+   "fields": {},
+   "syntax": "vflush",
+   "manual_ref": "VFPU manual p.147"
+  },
+  {
+   "name": "vh2f.p",
+   "page": 149,
+   "mask": 4294934656,
+   "match": 3493003392,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vh2f.p  vd, vs",
+   "manual_ref": "VFPU manual p.149"
+  },
+  {
+   "name": "vh2f.s",
+   "page": 148,
+   "mask": 4294934656,
+   "match": 3493003264,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vh2f.s  vd, vs",
+   "manual_ref": "VFPU manual p.148"
+  },
+  {
+   "name": "vhdp.p",
+   "page": 150,
+   "mask": 4286611584,
+   "match": 1711276160,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vhdp.p  vd, vs, vt",
+   "manual_ref": "VFPU manual p.150"
+  },
+  {
+   "name": "vhdp.q",
+   "page": 152,
+   "mask": 4286611584,
+   "match": 1711308928,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vhdp.q  vd, vs, vt",
+   "manual_ref": "VFPU manual p.152"
+  },
+  {
+   "name": "vhdp.t",
+   "page": 151,
+   "mask": 4286611584,
+   "match": 1711308800,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vhdp.t  vd, vs, vt",
+   "manual_ref": "VFPU manual p.151"
+  },
+  {
+   "name": "vhtfm2.p",
+   "page": 153,
+   "mask": 4286611584,
+   "match": 4034920448,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vhtfm2.p  vd, vs, vt",
+   "manual_ref": "VFPU manual p.153"
+  },
+  {
+   "name": "vhtfm3.t",
+   "page": 155,
+   "mask": 4286611584,
+   "match": 4043309184,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vhtfm3.t  vd, vs, vt",
+   "manual_ref": "VFPU manual p.155"
+  },
+  {
+   "name": "vhtfm4.q",
+   "page": 157,
+   "mask": 4286611584,
+   "match": 4051730432,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vhtfm4.q  vd, vs, vt",
+   "manual_ref": "VFPU manual p.157"
+  },
+  {
+   "name": "vi2c.q",
+   "page": 159,
+   "mask": 4294934656,
+   "match": 3493691520,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vi2c.q  vd, vs",
+   "manual_ref": "VFPU manual p.159"
+  },
+  {
+   "name": "vi2f.p",
+   "page": 161,
+   "mask": 4292903040,
+   "match": 3531604096,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vi2f.p  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.161"
+  },
+  {
+   "name": "vi2f.q",
+   "page": 163,
+   "mask": 4292903040,
+   "match": 3531636864,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vi2f.q  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.163"
+  },
+  {
+   "name": "vi2f.s",
+   "page": 160,
+   "mask": 4292903040,
+   "match": 3531603968,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vi2f.s  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.160"
+  },
+  {
+   "name": "vi2f.t",
+   "page": 162,
+   "mask": 4292903040,
+   "match": 3531636736,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vi2f.t  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.162"
+  },
+  {
+   "name": "vi2s.p",
+   "page": 164,
+   "mask": 4294934656,
+   "match": 3493789824,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vi2s.p  vd, vs",
+   "manual_ref": "VFPU manual p.164"
+  },
+  {
+   "name": "vi2s.q",
+   "page": 165,
+   "mask": 4294934656,
+   "match": 3493822592,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vi2s.q  vd, vs",
+   "manual_ref": "VFPU manual p.165"
+  },
+  {
+   "name": "vi2uc.q",
+   "page": 166,
+   "mask": 4294934656,
+   "match": 3493625984,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vi2uc.q  vd, vs",
+   "manual_ref": "VFPU manual p.166"
+  },
+  {
+   "name": "vi2us.p",
+   "page": 168,
+   "mask": 4294934656,
+   "match": 3493724288,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vi2us.p  vd, vs",
+   "manual_ref": "VFPU manual p.168"
+  },
+  {
+   "name": "vi2us.q",
+   "page": 170,
+   "mask": 4294934656,
+   "match": 3493757056,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vi2us.q  vd, vs",
+   "manual_ref": "VFPU manual p.170"
+  },
+  {
+   "name": "vidt.p",
+   "page": 172,
+   "mask": 4294967168,
+   "match": 3489857664,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vidt.p  vd",
+   "manual_ref": "VFPU manual p.172"
+  },
+  {
+   "name": "vidt.q",
+   "page": 173,
+   "mask": 4294967168,
+   "match": 3489890432,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vidt.q  vd",
+   "manual_ref": "VFPU manual p.173"
+  },
+  {
+   "name": "viim.s",
+   "page": 174,
+   "mask": 4286578688,
+   "match": 3741319168,
+   "fields": {
+    "vd": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "imm16": [
+     {
+      "shift": 0,
+      "bits": 16,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "viim.s  vd, imm16",
+   "manual_ref": "VFPU manual p.174"
+  },
+  {
+   "name": "vlgb.s",
+   "page": 175,
+   "mask": 4294934656,
+   "match": 3493265408,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vlgb.s  vd, vs",
+   "manual_ref": "VFPU manual p.175"
+  },
+  {
+   "name": "vlog2.p",
+   "page": 179,
+   "mask": 4294934656,
+   "match": 3491037312,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vlog2.p  vd, vs",
+   "manual_ref": "VFPU manual p.179"
+  },
+  {
+   "name": "vlog2.q",
+   "page": 183,
+   "mask": 4294934656,
+   "match": 3491070080,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vlog2.q  vd, vs",
+   "manual_ref": "VFPU manual p.183"
+  },
+  {
+   "name": "vlog2.s",
+   "page": 177,
+   "mask": 4294934656,
+   "match": 3491037184,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vlog2.s  vd, vs",
+   "manual_ref": "VFPU manual p.177"
+  },
+  {
+   "name": "vlog2.t",
+   "page": 181,
+   "mask": 4294934656,
+   "match": 3491069952,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vlog2.t  vd, vs",
+   "manual_ref": "VFPU manual p.181"
+  },
+  {
+   "name": "vmax.p",
+   "page": 187,
+   "mask": 4286611584,
+   "match": 1837105280,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmax.p  vd, vs, vt",
+   "manual_ref": "VFPU manual p.187"
+  },
+  {
+   "name": "vmax.q",
+   "page": 191,
+   "mask": 4286611584,
+   "match": 1837138048,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmax.q  vd, vs, vt",
+   "manual_ref": "VFPU manual p.191"
+  },
+  {
+   "name": "vmax.s",
+   "page": 185,
+   "mask": 4286611584,
+   "match": 1837105152,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmax.s  vd, vs, vt",
+   "manual_ref": "VFPU manual p.185"
+  },
+  {
+   "name": "vmax.t",
+   "page": 189,
+   "mask": 4286611584,
+   "match": 1837137920,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmax.t  vd, vs, vt",
+   "manual_ref": "VFPU manual p.189"
+  },
+  {
+   "name": "vmfvc",
+   "page": 193,
+   "mask": 4294901888,
+   "match": 3494903808,
+   "fields": {
+    "imm8": [
+     {
+      "shift": 8,
+      "bits": 8,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmfvc  vd, imm8",
+   "manual_ref": "VFPU manual p.193"
+  },
+  {
+   "name": "vmidt.p",
+   "page": 195,
+   "mask": 4294967168,
+   "match": 4085448832,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmidt.p  vd",
+   "manual_ref": "VFPU manual p.195"
+  },
+  {
+   "name": "vmidt.q",
+   "page": 197,
+   "mask": 4294967168,
+   "match": 4085481600,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmidt.q  vd",
+   "manual_ref": "VFPU manual p.197"
+  },
+  {
+   "name": "vmidt.t",
+   "page": 196,
+   "mask": 4294967168,
+   "match": 4085481472,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmidt.t  vd",
+   "manual_ref": "VFPU manual p.196"
+  },
+  {
+   "name": "vmin.p",
+   "page": 201,
+   "mask": 4286611584,
+   "match": 1828716672,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmin.p  vd, vs, vt",
+   "manual_ref": "VFPU manual p.201"
+  },
+  {
+   "name": "vmin.q",
+   "page": 205,
+   "mask": 4286611584,
+   "match": 1828749440,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmin.q  vd, vs, vt",
+   "manual_ref": "VFPU manual p.205"
+  },
+  {
+   "name": "vmin.s",
+   "page": 199,
+   "mask": 4286611584,
+   "match": 1828716544,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmin.s  vd, vs, vt",
+   "manual_ref": "VFPU manual p.199"
+  },
+  {
+   "name": "vmin.t",
+   "page": 203,
+   "mask": 4286611584,
+   "match": 1828749312,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmin.t  vd, vs, vt",
+   "manual_ref": "VFPU manual p.203"
+  },
+  {
+   "name": "vmmov.p",
+   "page": 207,
+   "mask": 4294934656,
+   "match": 4085252224,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmmov.p  vd, vs",
+   "manual_ref": "VFPU manual p.207"
+  },
+  {
+   "name": "vmmov.q",
+   "page": 209,
+   "mask": 4294934656,
+   "match": 4085284992,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmmov.q  vd, vs",
+   "manual_ref": "VFPU manual p.209"
+  },
+  {
+   "name": "vmmov.t",
+   "page": 208,
+   "mask": 4294934656,
+   "match": 4085284864,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmmov.t  vd, vs",
+   "manual_ref": "VFPU manual p.208"
+  },
+  {
+   "name": "vmmul.p",
+   "page": 211,
+   "mask": 4286611584,
+   "match": 4026531968,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vst": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmmul.p  vd, vs, vt",
+   "manual_ref": "VFPU manual p.211"
+  },
+  {
+   "name": "vmmul.q",
+   "page": 215,
+   "mask": 4286611584,
+   "match": 4026564736,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vst": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmmul.q  vd, vs, vt",
+   "manual_ref": "VFPU manual p.215"
+  },
+  {
+   "name": "vmmul.t",
+   "page": 213,
+   "mask": 4286611584,
+   "match": 4026564608,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vst": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmmul.t  vd, vs, vt",
+   "manual_ref": "VFPU manual p.213"
+  },
+  {
+   "name": "vmone.p",
+   "page": 218,
+   "mask": 4294967168,
+   "match": 4085710976,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmone.p  vd",
+   "manual_ref": "VFPU manual p.218"
+  },
+  {
+   "name": "vmone.q",
+   "page": 220,
+   "mask": 4294967168,
+   "match": 4085743744,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmone.q  vd",
+   "manual_ref": "VFPU manual p.220"
+  },
+  {
+   "name": "vmone.t",
+   "page": 219,
+   "mask": 4294967168,
+   "match": 4085743616,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmone.t  vd",
+   "manual_ref": "VFPU manual p.219"
+  },
+  {
+   "name": "vmov.p",
+   "page": 223,
+   "mask": 4294934656,
+   "match": 3489661056,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmov.p  vd, vs",
+   "manual_ref": "VFPU manual p.223"
+  },
+  {
+   "name": "vmov.q",
+   "page": 225,
+   "mask": 4294934656,
+   "match": 3489693824,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmov.q  vd, vs",
+   "manual_ref": "VFPU manual p.225"
+  },
+  {
+   "name": "vmov.s",
+   "page": 222,
+   "mask": 4294934656,
+   "match": 3489660928,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmov.s  vd, vs",
+   "manual_ref": "VFPU manual p.222"
+  },
+  {
+   "name": "vmov.t",
+   "page": 224,
+   "mask": 4294934656,
+   "match": 3489693696,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmov.t  vd, vs",
+   "manual_ref": "VFPU manual p.224"
+  },
+  {
+   "name": "vmscl.p",
+   "page": 226,
+   "mask": 4286611584,
+   "match": 4060086400,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmscl.p  vd, vs, vt",
+   "manual_ref": "VFPU manual p.226"
+  },
+  {
+   "name": "vmscl.q",
+   "page": 228,
+   "mask": 4286611584,
+   "match": 4060119168,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmscl.q  vd, vs, vt",
+   "manual_ref": "VFPU manual p.228"
+  },
+  {
+   "name": "vmscl.t",
+   "page": 227,
+   "mask": 4286611584,
+   "match": 4060119040,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmscl.t  vd, vs, vt",
+   "manual_ref": "VFPU manual p.227"
+  },
+  {
+   "name": "vmtvc",
+   "page": 230,
+   "mask": 4294934528,
+   "match": 3494969344,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "imm8": [
+     {
+      "shift": 0,
+      "bits": 8,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmtvc  imm8, vs",
+   "manual_ref": "VFPU manual p.230"
+  },
+  {
+   "name": "vmul.p",
+   "page": 232,
+   "mask": 4286611584,
+   "match": 1677721728,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmul.p  vd, vs, vt",
+   "manual_ref": "VFPU manual p.232"
+  },
+  {
+   "name": "vmul.q",
+   "page": 234,
+   "mask": 4286611584,
+   "match": 1677754496,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmul.q  vd, vs, vt",
+   "manual_ref": "VFPU manual p.234"
+  },
+  {
+   "name": "vmul.s",
+   "page": 231,
+   "mask": 4286611584,
+   "match": 1677721600,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmul.s  vd, vs, vt",
+   "manual_ref": "VFPU manual p.231"
+  },
+  {
+   "name": "vmul.t",
+   "page": 233,
+   "mask": 4286611584,
+   "match": 1677754368,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmul.t  vd, vs, vt",
+   "manual_ref": "VFPU manual p.233"
+  },
+  {
+   "name": "vmzero.p",
+   "page": 235,
+   "mask": 4294967168,
+   "match": 4085645440,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmzero.p  vd",
+   "manual_ref": "VFPU manual p.235"
+  },
+  {
+   "name": "vmzero.q",
+   "page": 237,
+   "mask": 4294967168,
+   "match": 4085678208,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmzero.q  vd",
+   "manual_ref": "VFPU manual p.237"
+  },
+  {
+   "name": "vmzero.t",
+   "page": 236,
+   "mask": 4294967168,
+   "match": 4085678080,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vmzero.t  vd",
+   "manual_ref": "VFPU manual p.236"
+  },
+  {
+   "name": "vneg.p",
+   "page": 240,
+   "mask": 4294934656,
+   "match": 3489792128,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vneg.p  vd, vs",
+   "manual_ref": "VFPU manual p.240"
+  },
+  {
+   "name": "vneg.q",
+   "page": 244,
+   "mask": 4294934656,
+   "match": 3489824896,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vneg.q  vd, vs",
+   "manual_ref": "VFPU manual p.244"
+  },
+  {
+   "name": "vneg.s",
+   "page": 239,
+   "mask": 4294934656,
+   "match": 3489792000,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vneg.s  vd, vs",
+   "manual_ref": "VFPU manual p.239"
+  },
+  {
+   "name": "vneg.t",
+   "page": 242,
+   "mask": 4294934656,
+   "match": 3489824768,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vneg.t  vd, vs",
+   "manual_ref": "VFPU manual p.242"
+  },
+  {
+   "name": "vnop",
+   "page": 246,
+   "mask": 4294967295,
+   "match": 4294901760,
+   "fields": {},
+   "syntax": "vnop",
+   "manual_ref": "VFPU manual p.246"
+  },
+  {
+   "name": "vnrcp.p",
+   "page": 249,
+   "mask": 4294934656,
+   "match": 3491233920,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vnrcp.p  vd, vs",
+   "manual_ref": "VFPU manual p.249"
+  },
+  {
+   "name": "vnrcp.q",
+   "page": 253,
+   "mask": 4294934656,
+   "match": 3491266688,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vnrcp.q  vd, vs",
+   "manual_ref": "VFPU manual p.253"
+  },
+  {
+   "name": "vnrcp.s",
+   "page": 247,
+   "mask": 4294934656,
+   "match": 3491233792,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vnrcp.s  vd, vs",
+   "manual_ref": "VFPU manual p.247"
+  },
+  {
+   "name": "vnrcp.t",
+   "page": 251,
+   "mask": 4294934656,
+   "match": 3491266560,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vnrcp.t  vd, vs",
+   "manual_ref": "VFPU manual p.251"
+  },
+  {
+   "name": "vnsin.p",
+   "page": 257,
+   "mask": 4294934656,
+   "match": 3491364992,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vnsin.p  vd, vs",
+   "manual_ref": "VFPU manual p.257"
+  },
+  {
+   "name": "vnsin.q",
+   "page": 261,
+   "mask": 4294934656,
+   "match": 3491397760,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vnsin.q  vd, vs",
+   "manual_ref": "VFPU manual p.261"
+  },
+  {
+   "name": "vnsin.s",
+   "page": 255,
+   "mask": 4294934656,
+   "match": 3491364864,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vnsin.s  vd, vs",
+   "manual_ref": "VFPU manual p.255"
+  },
+  {
+   "name": "vnsin.t",
+   "page": 259,
+   "mask": 4294934656,
+   "match": 3491397632,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vnsin.t  vd, vs",
+   "manual_ref": "VFPU manual p.259"
+  },
+  {
+   "name": "vocp.p",
+   "page": 264,
+   "mask": 4294934656,
+   "match": 3494117504,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vocp.p  vd, vs",
+   "manual_ref": "VFPU manual p.264"
+  },
+  {
+   "name": "vocp.q",
+   "page": 266,
+   "mask": 4294934656,
+   "match": 3494150272,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vocp.q  vd, vs",
+   "manual_ref": "VFPU manual p.266"
+  },
+  {
+   "name": "vocp.s",
+   "page": 263,
+   "mask": 4294934656,
+   "match": 3494117376,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vocp.s  vd, vs",
+   "manual_ref": "VFPU manual p.263"
+  },
+  {
+   "name": "vocp.t",
+   "page": 265,
+   "mask": 4294934656,
+   "match": 3494150144,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vocp.t  vd, vs",
+   "manual_ref": "VFPU manual p.265"
+  },
+  {
+   "name": "vone.p",
+   "page": 268,
+   "mask": 4294967168,
+   "match": 3490119808,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vone.p  vd",
+   "manual_ref": "VFPU manual p.268"
+  },
+  {
+   "name": "vone.q",
+   "page": 270,
+   "mask": 4294967168,
+   "match": 3490152576,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vone.q  vd",
+   "manual_ref": "VFPU manual p.270"
+  },
+  {
+   "name": "vone.s",
+   "page": 267,
+   "mask": 4294967168,
+   "match": 3490119680,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vone.s  vd",
+   "manual_ref": "VFPU manual p.267"
+  },
+  {
+   "name": "vone.t",
+   "page": 269,
+   "mask": 4294967168,
+   "match": 3490152448,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vone.t  vd",
+   "manual_ref": "VFPU manual p.269"
+  },
+  {
+   "name": "vpfxd",
+   "page": 271,
+   "mask": 4278190080,
+   "match": 3724541952,
+   "fields": {
+    "imm24": [
+     {
+      "shift": 0,
+      "bits": 24,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vpfxd  wpx, wpy, wpz, wpw",
+   "manual_ref": "VFPU manual p.271"
+  },
+  {
+   "name": "vpfxs",
+   "page": 272,
+   "mask": 4278190080,
+   "match": 3690987520,
+   "fields": {
+    "imm24": [
+     {
+      "shift": 0,
+      "bits": 24,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vpfxs  rpx, rpy, rpz, rpw",
+   "manual_ref": "VFPU manual p.272"
+  },
+  {
+   "name": "vpfxt",
+   "page": 273,
+   "mask": 4278190080,
+   "match": 3707764736,
+   "fields": {
+    "imm24": [
+     {
+      "shift": 0,
+      "bits": 24,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vpfxt  rpx, rpy, rpz, rpw",
+   "manual_ref": "VFPU manual p.273"
+  },
+  {
+   "name": "vqmul.q",
+   "page": 274,
+   "mask": 4286611584,
+   "match": 4068507776,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vqmul.q  vd, vs, vt",
+   "manual_ref": "VFPU manual p.274"
+  },
+  {
+   "name": "vrcp.p",
+   "page": 277,
+   "mask": 4294934656,
+   "match": 3490709632,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrcp.p  vd, vs",
+   "manual_ref": "VFPU manual p.277"
+  },
+  {
+   "name": "vrcp.q",
+   "page": 281,
+   "mask": 4294934656,
+   "match": 3490742400,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrcp.q  vd, vs",
+   "manual_ref": "VFPU manual p.281"
+  },
+  {
+   "name": "vrcp.s",
+   "page": 275,
+   "mask": 4294934656,
+   "match": 3490709504,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrcp.s  vd, vs",
+   "manual_ref": "VFPU manual p.275"
+  },
+  {
+   "name": "vrcp.t",
+   "page": 279,
+   "mask": 4294934656,
+   "match": 3490742272,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrcp.t  vd, vs",
+   "manual_ref": "VFPU manual p.279"
+  },
+  {
+   "name": "vrexp2.p",
+   "page": 285,
+   "mask": 4294934656,
+   "match": 3491496064,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrexp2.p  vd, vs",
+   "manual_ref": "VFPU manual p.285"
+  },
+  {
+   "name": "vrexp2.q",
+   "page": 289,
+   "mask": 4294934656,
+   "match": 3491528832,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrexp2.q  vd, vs",
+   "manual_ref": "VFPU manual p.289"
+  },
+  {
+   "name": "vrexp2.s",
+   "page": 283,
+   "mask": 4294934656,
+   "match": 3491495936,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrexp2.s  vd, vs",
+   "manual_ref": "VFPU manual p.283"
+  },
+  {
+   "name": "vrexp2.t",
+   "page": 287,
+   "mask": 4294934656,
+   "match": 3491528704,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrexp2.t  vd, vs",
+   "manual_ref": "VFPU manual p.287"
+  },
+  {
+   "name": "vrndf1.p",
+   "page": 292,
+   "mask": 4294967168,
+   "match": 3491889280,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrndf1.p  vd",
+   "manual_ref": "VFPU manual p.292"
+  },
+  {
+   "name": "vrndf1.q",
+   "page": 294,
+   "mask": 4294967168,
+   "match": 3491922048,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrndf1.q  vd",
+   "manual_ref": "VFPU manual p.294"
+  },
+  {
+   "name": "vrndf1.s",
+   "page": 291,
+   "mask": 4294967168,
+   "match": 3491889152,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrndf1.s  vd",
+   "manual_ref": "VFPU manual p.291"
+  },
+  {
+   "name": "vrndf1.t",
+   "page": 293,
+   "mask": 4294967168,
+   "match": 3491921920,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrndf1.t  vd",
+   "manual_ref": "VFPU manual p.293"
+  },
+  {
+   "name": "vrndf2.p",
+   "page": 296,
+   "mask": 4294967168,
+   "match": 3491954816,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrndf2.p  vd",
+   "manual_ref": "VFPU manual p.296"
+  },
+  {
+   "name": "vrndf2.q",
+   "page": 298,
+   "mask": 4294967168,
+   "match": 3491987584,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrndf2.q  vd",
+   "manual_ref": "VFPU manual p.298"
+  },
+  {
+   "name": "vrndf2.s",
+   "page": 295,
+   "mask": 4294967168,
+   "match": 3491954688,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrndf2.s  vd",
+   "manual_ref": "VFPU manual p.295"
+  },
+  {
+   "name": "vrndf2.t",
+   "page": 297,
+   "mask": 4294967168,
+   "match": 3491987456,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrndf2.t  vd",
+   "manual_ref": "VFPU manual p.297"
+  },
+  {
+   "name": "vrndi.p",
+   "page": 300,
+   "mask": 4294967168,
+   "match": 3491823744,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrndi.p  vd",
+   "manual_ref": "VFPU manual p.300"
+  },
+  {
+   "name": "vrndi.q",
+   "page": 302,
+   "mask": 4294967168,
+   "match": 3491856512,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrndi.q  vd",
+   "manual_ref": "VFPU manual p.302"
+  },
+  {
+   "name": "vrndi.s",
+   "page": 299,
+   "mask": 4294967168,
+   "match": 3491823616,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrndi.s  vd",
+   "manual_ref": "VFPU manual p.299"
+  },
+  {
+   "name": "vrndi.t",
+   "page": 301,
+   "mask": 4294967168,
+   "match": 3491856384,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrndi.t  vd",
+   "manual_ref": "VFPU manual p.301"
+  },
+  {
+   "name": "vrnds.s",
+   "page": 303,
+   "mask": 4294934783,
+   "match": 3491758080,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrnds.s  vs",
+   "manual_ref": "VFPU manual p.303"
+  },
+  {
+   "name": "vrot.p",
+   "page": 304,
+   "mask": 4292903040,
+   "match": 4087349376,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrot.p  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.304"
+  },
+  {
+   "name": "vrot.q",
+   "page": 308,
+   "mask": 4292903040,
+   "match": 4087382144,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrot.q  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.308"
+  },
+  {
+   "name": "vrot.t",
+   "page": 306,
+   "mask": 4292903040,
+   "match": 4087382016,
+   "fields": {
+    "imm5": [
+     {
+      "shift": 16,
+      "bits": 5,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrot.t  vd, vs, imm5",
+   "manual_ref": "VFPU manual p.306"
+  },
+  {
+   "name": "vrsq.p",
+   "page": 312,
+   "mask": 4294934656,
+   "match": 3490775168,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrsq.p  vd, vs",
+   "manual_ref": "VFPU manual p.312"
+  },
+  {
+   "name": "vrsq.q",
+   "page": 316,
+   "mask": 4294934656,
+   "match": 3490807936,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrsq.q  vd, vs",
+   "manual_ref": "VFPU manual p.316"
+  },
+  {
+   "name": "vrsq.s",
+   "page": 310,
+   "mask": 4294934656,
+   "match": 3490775040,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrsq.s  vd, vs",
+   "manual_ref": "VFPU manual p.310"
+  },
+  {
+   "name": "vrsq.t",
+   "page": 314,
+   "mask": 4294934656,
+   "match": 3490807808,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vrsq.t  vd, vs",
+   "manual_ref": "VFPU manual p.314"
+  },
+  {
+   "name": "vs2i.p",
+   "page": 319,
+   "mask": 4294934656,
+   "match": 3493527680,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vs2i.p  vd, vs",
+   "manual_ref": "VFPU manual p.319"
+  },
+  {
+   "name": "vs2i.s",
+   "page": 318,
+   "mask": 4294934656,
+   "match": 3493527552,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vs2i.s  vd, vs",
+   "manual_ref": "VFPU manual p.318"
+  },
+  {
+   "name": "vsat0.p",
+   "page": 321,
+   "mask": 4294934656,
+   "match": 3489923200,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsat0.p  vd, vs",
+   "manual_ref": "VFPU manual p.321"
+  },
+  {
+   "name": "vsat0.q",
+   "page": 323,
+   "mask": 4294934656,
+   "match": 3489955968,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsat0.q  vd, vs",
+   "manual_ref": "VFPU manual p.323"
+  },
+  {
+   "name": "vsat0.s",
+   "page": 320,
+   "mask": 4294934656,
+   "match": 3489923072,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsat0.s  vd, vs",
+   "manual_ref": "VFPU manual p.320"
+  },
+  {
+   "name": "vsat0.t",
+   "page": 322,
+   "mask": 4294934656,
+   "match": 3489955840,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsat0.t  vd, vs",
+   "manual_ref": "VFPU manual p.322"
+  },
+  {
+   "name": "vsat1.p",
+   "page": 325,
+   "mask": 4294934656,
+   "match": 3489988736,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsat1.p  vd, vs",
+   "manual_ref": "VFPU manual p.325"
+  },
+  {
+   "name": "vsat1.q",
+   "page": 327,
+   "mask": 4294934656,
+   "match": 3490021504,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsat1.q  vd, vs",
+   "manual_ref": "VFPU manual p.327"
+  },
+  {
+   "name": "vsat1.s",
+   "page": 324,
+   "mask": 4294934656,
+   "match": 3489988608,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsat1.s  vd, vs",
+   "manual_ref": "VFPU manual p.324"
+  },
+  {
+   "name": "vsat1.t",
+   "page": 326,
+   "mask": 4294934656,
+   "match": 3490021376,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsat1.t  vd, vs",
+   "manual_ref": "VFPU manual p.326"
+  },
+  {
+   "name": "vsbn.s",
+   "page": 328,
+   "mask": 4286611584,
+   "match": 1627389952,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsbn.s  vd, vs, vt",
+   "manual_ref": "VFPU manual p.328"
+  },
+  {
+   "name": "vsbz.s",
+   "page": 330,
+   "mask": 4294934656,
+   "match": 3493199872,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsbz.s  vd, vs",
+   "manual_ref": "VFPU manual p.330"
+  },
+  {
+   "name": "vscl.p",
+   "page": 331,
+   "mask": 4286611584,
+   "match": 1694498944,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vscl.p  vd, vs, vt",
+   "manual_ref": "VFPU manual p.331"
+  },
+  {
+   "name": "vscl.q",
+   "page": 333,
+   "mask": 4286611584,
+   "match": 1694531712,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vscl.q  vd, vs, vt",
+   "manual_ref": "VFPU manual p.333"
+  },
+  {
+   "name": "vscl.t",
+   "page": 332,
+   "mask": 4286611584,
+   "match": 1694531584,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vscl.t  vd, vs, vt",
+   "manual_ref": "VFPU manual p.332"
+  },
+  {
+   "name": "vscmp.p",
+   "page": 336,
+   "mask": 4286611584,
+   "match": 1853882496,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vscmp.p  vd, vs, vt",
+   "manual_ref": "VFPU manual p.336"
+  },
+  {
+   "name": "vscmp.q",
+   "page": 340,
+   "mask": 4286611584,
+   "match": 1853915264,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vscmp.q  vd, vs, vt",
+   "manual_ref": "VFPU manual p.340"
+  },
+  {
+   "name": "vscmp.s",
+   "page": 334,
+   "mask": 4286611584,
+   "match": 1853882368,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vscmp.s  vd, vs, vt",
+   "manual_ref": "VFPU manual p.334"
+  },
+  {
+   "name": "vscmp.t",
+   "page": 338,
+   "mask": 4286611584,
+   "match": 1853915136,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vscmp.t  vd, vs, vt",
+   "manual_ref": "VFPU manual p.338"
+  },
+  {
+   "name": "vsge.p",
+   "page": 344,
+   "mask": 4286611584,
+   "match": 1862271104,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsge.p  vd, vs, vt",
+   "manual_ref": "VFPU manual p.344"
+  },
+  {
+   "name": "vsge.q",
+   "page": 348,
+   "mask": 4286611584,
+   "match": 1862303872,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsge.q  vd, vs, vt",
+   "manual_ref": "VFPU manual p.348"
+  },
+  {
+   "name": "vsge.s",
+   "page": 342,
+   "mask": 4286611584,
+   "match": 1862270976,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsge.s  vd, vs, vt",
+   "manual_ref": "VFPU manual p.342"
+  },
+  {
+   "name": "vsge.t",
+   "page": 346,
+   "mask": 4286611584,
+   "match": 1862303744,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsge.t  vd, vs, vt",
+   "manual_ref": "VFPU manual p.346"
+  },
+  {
+   "name": "vsgn.p",
+   "page": 352,
+   "mask": 4294934656,
+   "match": 3494510720,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsgn.p  vd, vs",
+   "manual_ref": "VFPU manual p.352"
+  },
+  {
+   "name": "vsgn.q",
+   "page": 356,
+   "mask": 4294934656,
+   "match": 3494543488,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsgn.q  vd, vs",
+   "manual_ref": "VFPU manual p.356"
+  },
+  {
+   "name": "vsgn.s",
+   "page": 350,
+   "mask": 4294934656,
+   "match": 3494510592,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsgn.s  vd, vs",
+   "manual_ref": "VFPU manual p.350"
+  },
+  {
+   "name": "vsgn.t",
+   "page": 354,
+   "mask": 4294934656,
+   "match": 3494543360,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsgn.t  vd, vs",
+   "manual_ref": "VFPU manual p.354"
+  },
+  {
+   "name": "vsin.p",
+   "page": 360,
+   "mask": 4294934656,
+   "match": 3490840704,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsin.p  vd, vs",
+   "manual_ref": "VFPU manual p.360"
+  },
+  {
+   "name": "vsin.q",
+   "page": 364,
+   "mask": 4294934656,
+   "match": 3490873472,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsin.q  vd, vs",
+   "manual_ref": "VFPU manual p.364"
+  },
+  {
+   "name": "vsin.s",
+   "page": 358,
+   "mask": 4294934656,
+   "match": 3490840576,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsin.s  vd, vs",
+   "manual_ref": "VFPU manual p.358"
+  },
+  {
+   "name": "vsin.t",
+   "page": 362,
+   "mask": 4294934656,
+   "match": 3490873344,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsin.t  vd, vs",
+   "manual_ref": "VFPU manual p.362"
+  },
+  {
+   "name": "vslt.p",
+   "page": 368,
+   "mask": 4286611584,
+   "match": 1870659712,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vslt.p  vd, vs, vt",
+   "manual_ref": "VFPU manual p.368"
+  },
+  {
+   "name": "vslt.q",
+   "page": 372,
+   "mask": 4286611584,
+   "match": 1870692480,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vslt.q  vd, vs, vt",
+   "manual_ref": "VFPU manual p.372"
+  },
+  {
+   "name": "vslt.s",
+   "page": 366,
+   "mask": 4286611584,
+   "match": 1870659584,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vslt.s  vd, vs, vt",
+   "manual_ref": "VFPU manual p.366"
+  },
+  {
+   "name": "vslt.t",
+   "page": 370,
+   "mask": 4286611584,
+   "match": 1870692352,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vslt.t  vd, vs, vt",
+   "manual_ref": "VFPU manual p.370"
+  },
+  {
+   "name": "vsocp.p",
+   "page": 375,
+   "mask": 4294934656,
+   "match": 3494183040,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsocp.p  vd, vs",
+   "manual_ref": "VFPU manual p.375"
+  },
+  {
+   "name": "vsocp.s",
+   "page": 374,
+   "mask": 4294934656,
+   "match": 3494182912,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsocp.s  vd, vs",
+   "manual_ref": "VFPU manual p.374"
+  },
+  {
+   "name": "vsqrt.p",
+   "page": 378,
+   "mask": 4294934656,
+   "match": 3491102848,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsqrt.p  vd, vs",
+   "manual_ref": "VFPU manual p.378"
+  },
+  {
+   "name": "vsqrt.q",
+   "page": 382,
+   "mask": 4294934656,
+   "match": 3491135616,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsqrt.q  vd, vs",
+   "manual_ref": "VFPU manual p.382"
+  },
+  {
+   "name": "vsqrt.s",
+   "page": 376,
+   "mask": 4294934656,
+   "match": 3491102720,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsqrt.s  vd, vs",
+   "manual_ref": "VFPU manual p.376"
+  },
+  {
+   "name": "vsqrt.t",
+   "page": 380,
+   "mask": 4294934656,
+   "match": 3491135488,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsqrt.t  vd, vs",
+   "manual_ref": "VFPU manual p.380"
+  },
+  {
+   "name": "vsrt1.q",
+   "page": 384,
+   "mask": 4294934656,
+   "match": 3493888128,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsrt1.q  vd, vs",
+   "manual_ref": "VFPU manual p.384"
+  },
+  {
+   "name": "vsrt2.q",
+   "page": 385,
+   "mask": 4294934656,
+   "match": 3493953664,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsrt2.q  vd, vs",
+   "manual_ref": "VFPU manual p.385"
+  },
+  {
+   "name": "vsrt3.q",
+   "page": 386,
+   "mask": 4294934656,
+   "match": 3494412416,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsrt3.q  vd, vs",
+   "manual_ref": "VFPU manual p.386"
+  },
+  {
+   "name": "vsrt4.q",
+   "page": 387,
+   "mask": 4294934656,
+   "match": 3494477952,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsrt4.q  vd, vs",
+   "manual_ref": "VFPU manual p.387"
+  },
+  {
+   "name": "vsub.p",
+   "page": 389,
+   "mask": 4286611584,
+   "match": 1619001472,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsub.p  vd, vs, vt",
+   "manual_ref": "VFPU manual p.389"
+  },
+  {
+   "name": "vsub.q",
+   "page": 391,
+   "mask": 4286611584,
+   "match": 1619034240,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsub.q  vd, vs, vt",
+   "manual_ref": "VFPU manual p.391"
+  },
+  {
+   "name": "vsub.s",
+   "page": 388,
+   "mask": 4286611584,
+   "match": 1619001344,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsub.s  vd, vs, vt",
+   "manual_ref": "VFPU manual p.388"
+  },
+  {
+   "name": "vsub.t",
+   "page": 390,
+   "mask": 4286611584,
+   "match": 1619034112,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vsub.t  vd, vs, vt",
+   "manual_ref": "VFPU manual p.390"
+  },
+  {
+   "name": "vsync",
+   "page": 392,
+   "mask": 4294967295,
+   "match": 4294902560,
+   "fields": {},
+   "syntax": "vsync",
+   "manual_ref": "VFPU manual p.392"
+  },
+  {
+   "name": "vsync2",
+   "page": 393,
+   "mask": 4294967295,
+   "match": 1214251263,
+   "fields": {},
+   "syntax": "vsync2",
+   "manual_ref": "VFPU manual p.393"
+  },
+  {
+   "name": "vt4444.q",
+   "page": 394,
+   "mask": 4294934656,
+   "match": 3495526528,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vt4444.q  vd, vs",
+   "manual_ref": "VFPU manual p.394"
+  },
+  {
+   "name": "vt5551.q",
+   "page": 396,
+   "mask": 4294934656,
+   "match": 3495592064,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vt5551.q  vd, vs",
+   "manual_ref": "VFPU manual p.396"
+  },
+  {
+   "name": "vt5650.q",
+   "page": 398,
+   "mask": 4294934656,
+   "match": 3495657600,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vt5650.q  vd, vs",
+   "manual_ref": "VFPU manual p.398"
+  },
+  {
+   "name": "vtfm2.p",
+   "page": 400,
+   "mask": 4286611584,
+   "match": 4034920576,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vtfm2.p  vd, vs, vt",
+   "manual_ref": "VFPU manual p.400"
+  },
+  {
+   "name": "vtfm3.t",
+   "page": 402,
+   "mask": 4286611584,
+   "match": 4043341824,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vtfm3.t  vd, vs, vt",
+   "manual_ref": "VFPU manual p.402"
+  },
+  {
+   "name": "vtfm4.q",
+   "page": 404,
+   "mask": 4286611584,
+   "match": 4051730560,
+   "fields": {
+    "vt": [
+     {
+      "shift": 16,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vtfm4.q  vd, vs, vt",
+   "manual_ref": "VFPU manual p.404"
+  },
+  {
+   "name": "vuc2ifs.s",
+   "page": 406,
+   "mask": 4294934656,
+   "match": 3493330944,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vuc2ifs.s  vd, vs",
+   "manual_ref": "VFPU manual p.406"
+  },
+  {
+   "name": "vus2i.p",
+   "page": 408,
+   "mask": 4294934656,
+   "match": 3493462144,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vus2i.p  vd, vs",
+   "manual_ref": "VFPU manual p.408"
+  },
+  {
+   "name": "vus2i.s",
+   "page": 407,
+   "mask": 4294934656,
+   "match": 3493462016,
+   "fields": {
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vus2i.s  vd, vs",
+   "manual_ref": "VFPU manual p.407"
+  },
+  {
+   "name": "vwbn.s",
+   "page": 409,
+   "mask": 4278222976,
+   "match": 3539992576,
+   "fields": {
+    "imm8": [
+     {
+      "shift": 16,
+      "bits": 8,
+      "dst_lsb": 0
+     }
+    ],
+    "vs": [
+     {
+      "shift": 8,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ],
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vwbn.s  vd, vs, imm8",
+   "manual_ref": "VFPU manual p.409"
+  },
+  {
+   "name": "vzero.p",
+   "page": 411,
+   "mask": 4294967168,
+   "match": 3490054272,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vzero.p  vd",
+   "manual_ref": "VFPU manual p.411"
+  },
+  {
+   "name": "vzero.q",
+   "page": 413,
+   "mask": 4294967168,
+   "match": 3490087040,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vzero.q  vd",
+   "manual_ref": "VFPU manual p.413"
+  },
+  {
+   "name": "vzero.s",
+   "page": 410,
+   "mask": 4294967168,
+   "match": 3490054144,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vzero.s  vd",
+   "manual_ref": "VFPU manual p.410"
+  },
+  {
+   "name": "vzero.t",
+   "page": 412,
+   "mask": 4294967168,
+   "match": 3490086912,
+   "fields": {
+    "vd": [
+     {
+      "shift": 0,
+      "bits": 7,
+      "dst_lsb": 0
+     }
+    ]
+   },
+   "syntax": "vzero.t  vd",
+   "manual_ref": "VFPU manual p.412"
+  }
+ ]
+}
