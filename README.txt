@@ -16,9 +16,6 @@ would for any other PSP homebrew or recompilation project.
 
 This repository does not include:
   - The game's disc image, extracted files, or any asset archive.
-  - Any mod or asset-replacement content.
-  - The prebuilt "image.bin" data blob (a raw copy of the game's .data/.bss
-    section) -- you regenerate this yourself from your own EBOOT, see below.
 
 
 Layout
