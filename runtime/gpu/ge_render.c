@@ -1722,6 +1722,14 @@ static void fill_sprite(const Vtx *p0, const Vtx *p1, int persp) {
         u1 = p1->u / (p1->rw != 0.0f ? p1->rw : 1.0f);
         v1 = p1->v / (p1->rw != 0.0f ? p1->rw : 1.0f);
     }
+    /* A sprite's two vertices are opposite corners AS GIVEN: v0's texel coords
+     * belong to v0's corner, whichever side of the rect that is. Handing the
+     * corners over in reverse is how the GE flips a sprite (the ring quadrants
+     * of the HUD reticle, mirrored UI tiles). xa/xb above sort the rect, so the
+     * texel coords have to follow the same sort or the flip is lost. */
+    int flipx = p0->x > p1->x, flipy = p0->y > p1->y;
+    if (flipx) { float t = u0; u0 = u1; u1 = t; }
+    if (flipy) { float t = v0; v0 = v1; v1 = t; }
     if (!zrange_ok(p1->z, persp)) { if (s_stat_on > 0) s_stat.zrange++; return; }
     uint16_t pz = clamp_z(p1->z);
     int use_z = persp ? ge.ztest_enable : thru_ztest();
@@ -1730,6 +1738,13 @@ static void fill_sprite(const Vtx *p0, const Vtx *p1, int persp) {
     if (persp) s_stat.spr3d++; else s_stat.spr2d++;
     float uw =(xb>xa)?(u1-u0)/(float)(xb-xa):0;
     float uvv=(yb>ya)?(v1-v0)/(float)(yb-ya):0;
+    /* The run is half-open, so the corner texel lands on the FIRST pixel and
+     * the far corner's texel is one step past the last. Mirrored, that anchor
+     * moves to the far edge: without the step the outermost texel column never
+     * gets sampled, which is exactly where a quarter-arc tile runs tangent --
+     * the reticle ring lost a chunk at its +x and +y extremes. */
+    if (flipx) u0 += uw;
+    if (flipy) v0 += uvv;
     for (int y=ya; y<yb; y++) {
         float fv = v0 + (y-ya)*uvv;
         for (int x=xa; x<xb; x++) {

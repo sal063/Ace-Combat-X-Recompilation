@@ -1745,7 +1745,17 @@ static int hook_sprite(const GeVtx *p0, const GeVtx *p1, int persp) {
         u1 = p1->u / (p1->rw != 0.0f ? p1->rw : 1.0f);
         v1 = p1->v / (p1->rw != 0.0f ? p1->rw : 1.0f);
     }
+    /* Same corner rule as fill_sprite(): u0/v0 belong to p0's corner, not to
+     * the top-left one. xa/xb/ya/yb sorted the rect, so sort the texel coords
+     * with them -- otherwise a reverse-order sprite (the GE's way of flipping
+     * one) draws unflipped. A mirrored run is anchored at the far edge, hence
+     * the extra step; see fill_sprite(). */
+    int flipx = p0->x > p1->x, flipy = p0->y > p1->y;
+    if (flipx) { float t = u0; u0 = u1; u1 = t; }
+    if (flipy) { float t = v0; v0 = v1; v1 = t; }
     float uw = (u1 - u0) / (xb - xa), vw = (v1 - v0) / (yb - ya);
+    if (flipx) { u0 += uw; u1 += uw; }
+    if (flipy) { v0 += vw; v1 += vw; }
     float ua = u0 - 0.5f * uw, ub = u1 - 0.5f * uw;
     float va = v0 - 0.5f * vw, vb = v1 - 0.5f * vw;
 
